@@ -1,6 +1,6 @@
-@RedRouteAI.API_HostAddress = http://localhost:5191
+@RedRouteAI_API_HostAddress = http://localhost:5191
 
-GET {{RedRouteAI.API_HostAddress}}/weatherforecast/
+GET {{RedRouteAI_API_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
