@@ -1,0 +1,35 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# C# files
+*.cs     text diff=csharp
+
+# Visual Studio solution and project files
+*.sln    text
+*.csproj text
+*.fsproj text
+*.vbproj text
+
+# Markdown
+*.md     text
+
+# JSON, YAML, XML
+*.json   text
+*.yml    text
+*.yaml   text
+*.xml    text
+
+# Shell scripts
+*.sh     text eol=lf
+
+# Ignore binary files for diff
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
+
+# Blazor/Razor
+*.razor  text
+*.cshtml text
