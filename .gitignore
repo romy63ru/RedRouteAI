@@ -1,0 +1,41 @@
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+out/
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+*.snupkg
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+
+# Docker
+*.pid
+
+# Others
+*.swp
+*.tmp
