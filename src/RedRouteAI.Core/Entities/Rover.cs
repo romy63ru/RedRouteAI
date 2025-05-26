@@ -1,3 +1,5 @@
+using RedRouteAI.Core.ValueObjects;
+
 namespace RedRouteAI.Core.Entities;
 
 public class Rover
