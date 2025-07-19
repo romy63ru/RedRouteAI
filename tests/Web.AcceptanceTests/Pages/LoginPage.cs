@@ -1,18 +1,12 @@
 ﻿namespace RedRouteAI.Web.AcceptanceTests.Pages;
 
-public class LoginPage : BasePage
+public class LoginPage(IBrowser browser, IPage page) : BasePage
 {
-    public LoginPage(IBrowser browser, IPage page)
-    {
-        Browser = browser;
-        Page = page;
-    }
-
     public override string PagePath => $"{BaseUrl}/Identity/Account/Login";
 
-    public override IBrowser Browser { get; }
+    public override IBrowser Browser { get; } = browser;
 
-    public override IPage Page { get; set; }
+    public override IPage Page { get; set; } = page;
 
     public Task SetEmail(string email)
         => Page.FillAsync("#Input_Email", email);

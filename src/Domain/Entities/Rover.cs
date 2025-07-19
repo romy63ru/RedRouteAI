@@ -1,22 +1,14 @@
 namespace RedRouteAI.Domain.Entities;
 
-public class Rover : BaseEntity
+public class Rover(string name, Location currentLocation, RoverStatus status = RoverStatus.Available) : BaseEntity
 {
-    public string Name { get; private set; }
-    public Location CurrentLocation { get; private set; }
-    public RoverStatus Status { get; private set; }
+    public string Name { get; private set; } = name ?? throw new ArgumentNullException(nameof(name));
+    public Location CurrentLocation { get; private set; } = currentLocation ?? throw new ArgumentNullException(nameof(currentLocation));
+    public RoverStatus Status { get; private set; } = status;
 
-    private readonly List<Order> _assignedOrders;
+    private readonly List<Order> _assignedOrders = [];
 
     public IReadOnlyCollection<Order> AssignedOrders => _assignedOrders.AsReadOnly();
-
-    public Rover(string name, Location currentLocation, RoverStatus status = RoverStatus.Available)
-    {
-        Name = name ?? throw new ArgumentNullException(nameof(name));
-        CurrentLocation = currentLocation ?? throw new ArgumentNullException(nameof(currentLocation));
-        Status = status;
-        _assignedOrders = [];
-    }
 
     public void AssignOrder(Order order)
     {

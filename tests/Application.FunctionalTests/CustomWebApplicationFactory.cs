@@ -13,16 +13,10 @@ namespace RedRouteAI.Application.FunctionalTests;
 
 using static Testing;
 
-public class CustomWebApplicationFactory : WebApplicationFactory<Program>
+public class CustomWebApplicationFactory(DbConnection connection, string connectionString) : WebApplicationFactory<Program>
 {
-    private readonly DbConnection _connection;
-    private readonly string _connectionString;
-
-    public CustomWebApplicationFactory(DbConnection connection, string connectionString)
-    {
-        _connection = connection;
-        _connectionString = connectionString;
-    }
+    private readonly DbConnection _connection = connection;
+    private readonly string _connectionString = connectionString;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {

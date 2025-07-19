@@ -1,15 +1,8 @@
-public class Order : BaseEntity
+public class Order(Location pickupLocation, Location destination) : BaseEntity
 {
-    public Location PickupLocation { get; private set; }
-    public Location Destination { get; private set; }
-    public bool Delivered { get; private set; }
-
-    public Order(Location pickupLocation, Location destination)
-    {
-        PickupLocation = pickupLocation ?? throw new ArgumentNullException(nameof(pickupLocation));
-        Destination = destination ?? throw new ArgumentNullException(nameof(destination));
-        Delivered = false;
-    }
+    public Location PickupLocation { get; private set; } = pickupLocation ?? throw new ArgumentNullException(nameof(pickupLocation));
+    public Location Destination { get; private set; } = destination ?? throw new ArgumentNullException(nameof(destination));
+    public bool Delivered { get; private set; } = false;
 
     public void MarkAsDelivered()
     {

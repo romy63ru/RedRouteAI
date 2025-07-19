@@ -1,14 +1,9 @@
 namespace RedRouteAI.Web.AcceptanceTests.StepDefinitions;
 
 [Binding]
-public sealed class LoginStepDefinitions
+public sealed class LoginStepDefinitions(LoginPage loginPage)
 {
-    private readonly LoginPage _loginPage;
-
-    public LoginStepDefinitions(LoginPage loginPage)
-    {
-        _loginPage = loginPage;
-    }
+    private readonly LoginPage _loginPage = loginPage;
 
     [BeforeFeature("Login")]
     public static async Task BeforeLoginScenario(IObjectContainer container)
