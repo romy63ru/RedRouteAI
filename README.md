@@ -14,19 +14,6 @@ RedRouteAPI is the backend brain of a larger system that simulates autonomous ro
 
 > 💡 This is **not** production code (yet). It's for experimentation, showcasing skills, and preparing for bigger things.
 
-## 📦 Project Structure
-
-RedRouteAI/
-├── src/
-│   ├── RedRoute.API/            # The main entry point (Web API)
-│   ├── RedRoute.Application/    # Use cases, commands, handlers
-│   ├── RedRoute.Domain/         # Core business logic and models
-│   └── RedRoute.Infrastructure/ # DB access, external services
-├── tests/
-│   ├── RedRoute.API.Tests/
-│   └── …
-└── RedRouteAI.sln
-
 ## 🛠️ Technologies
 
 - [.NET 8](https://dotnet.microsoft.com/)
